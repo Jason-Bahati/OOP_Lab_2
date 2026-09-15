@@ -11,7 +11,7 @@ class StockItem : public IReportable
         std::string sku, name;
         int quantityOnHand, nextSeq;
         double unitPrice;
-        std::vector<StockMovement*> history;
+        std::vector<StockMovement> history;
     
     public:
         std::string getSku() const;

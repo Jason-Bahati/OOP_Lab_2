@@ -6,9 +6,9 @@
 
 StockMovement::StockMovement(int Seq, std::string Kind, int Count)
 {
-    seq = Seq;
-    kind = Kind;
-    count = Count;
+    this->seq = Seq;
+    this->kind = Kind;
+    this->count = Count;
 }
 
 std::string StockMovement::Describe()
