@@ -44,8 +44,20 @@ bool StockItem::Receive(int count)
     }
 
     this->quantityOnHand = this->quantityOnHand + count;
-    StockMovement s(nextSeq, name, count);
+    StockMovement s(nextSeq, sku, count);
     history.push_back(s);
     nextSeq++;
     return true;
 }
+
+std::string StockItem::Describe() 
+{
+    std::ostringstream os;
+    os << sku << " " << name << " " << StockItem::Category();
+    return os.str();
+}
+
+std::string StockItem::getSku() const{ return sku; }
+std::string StockItem::getName() const { return name; }
+double StockItem::getUnitPrice() const { return unitPrice; }
+int StockItem::getQuantityOnHand() const { return quantityOnHand; }
