@@ -4,6 +4,10 @@
 #include "PhysicalGood.h"
 #include "DurableGood.h"
 
+    DurableGood::DurableGood
+    (std::string sku, std::string name, double unitPrice, int quantityOnHand, double weightPounds, int warrantyMonths) 
+    : PhysicalGood(sku, name, unitPrice, quantityOnHand, weightPounds), warrantyMonths(warrantyMonths) {}
+
     std::string DurableGood::Category()
     {
         return "Durable";
@@ -18,7 +22,7 @@
     {
         std::ostringstream os;
 
-        os << ", " << warrantyMonths << " month warranty";
+        os << PhysicalGood::Describe() << ", " << warrantyMonths << " month warranty";
         return os.str();
 
     }

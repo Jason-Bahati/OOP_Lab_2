@@ -8,8 +8,7 @@ class IDiscountable
         virtual bool IsOnSale() const = 0;
 
         virtual double SalePrice() = 0;
-
-        virtual ~IDiscountable() = default;
+      
 };
 
 #endif
