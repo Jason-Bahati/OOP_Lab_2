@@ -8,6 +8,8 @@ class IReportable
     public:
         virtual std::string ReportLine() = 0;
 
+        virtual ~IReportable() = default;
+
 };
 
 #endif

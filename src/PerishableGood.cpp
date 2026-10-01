@@ -5,6 +5,7 @@
 #include "PhysicalGood.h"
 #include "PerishableGood.h"
 
+    const double PerishableGood::SurchargeFee = 0.40;
 
     PerishableGood::PerishableGood
     (std::string sku, std::string name, double unitPrice, int quantityOnHand, double weightPounds, int shelfLifeDays) 
