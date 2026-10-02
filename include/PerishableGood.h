@@ -4,13 +4,16 @@
 #include "IDiscountable.h"
 #include <string>
 
+// Is a physical item that spoils over time and gets marked down as it ages
+
 class PerishableGood : public IDiscountable, public PhysicalGood
 {
     private:
         int shelfLifeDays;
     
     public:
-        PerishableGood(std::string sku, std::string name, double unitPrice, int quantityOnHand, double weightPounds, int shelfLifeDays);
+        PerishableGood
+        (std::string sku, std::string name, double unitPrice, int quantityOnHand, double weightPounds, int shelfLifeDays);
 
         std::string Category() override;
         double HandlingFee() override;

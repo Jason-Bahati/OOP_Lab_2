@@ -4,6 +4,8 @@
 #include <string>
 #include "ShelfCount.h"
 
+// A write-only log file that closes itself when it goes out of scope
+
 class CountLog
 {
     private:

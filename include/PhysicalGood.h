@@ -3,6 +3,11 @@
 #include "StockItem.h"
 #include <string>
 
+/*
+    Abstract class for anything that has physical bulk
+    and a shipping cost.
+*/
+
 class PhysicalGood : public StockItem
 {
     private:

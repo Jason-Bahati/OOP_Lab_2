@@ -5,6 +5,11 @@
 #include "IReportable.h"
 #include "StockMovement.h"
 
+
+/*
+    Abstract class at the root of the inventory hierarchy
+    holds the fields and behavior every record shares
+*/
 class StockItem : public IReportable
 {
     private:

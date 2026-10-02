@@ -3,11 +3,11 @@
 
 /*
     This file is an umbrella header that includes everything
-    so I don't have to write it all out in main, simply:
+    so I don't have to write them all out individualy in main, simply:
 
     #include "AllHeaderFiles.h"
 
-    this only applies to Lab 2: inheritance
+    this only applies to the hierarchy lab, not the contracts lab
 */
 
 #include "DurableGood.h"

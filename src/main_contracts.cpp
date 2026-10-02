@@ -31,6 +31,8 @@ int main()
     }
     std::cout << std::endl;
 
+    
+
     std::cout << "Contract 1: Equals and GetHashCode" << std::endl;
     std::cout << " " << std::left << std::setw(50) << "Record 1 equals record 5 (same key, new value)?"
     << std::right << std::setw(6) << tf(records[0] == records[4]) << std::endl;
@@ -59,12 +61,16 @@ int main()
     << std::right << std::setw(6) << recordSet.size() << std::endl;
     std::cout << std::endl;
 
+
+
     std::cout << "Contract 2: CompareTo, the natural order" << std::endl;
     std::sort(distinct.begin(), distinct.end());
     for (int i = 0; i < distinct.size(); i++) {
         std::cout << "  " << distinct[i].ToString() << std::endl;
     }
     std::cout << std::endl;
+
+
 
    
     std::cout << "Contract 3: a comparer, chosen at the call site" << std::endl;
@@ -80,6 +86,8 @@ int main()
         std::cout << "    " << distinct[i].ToString() << std::endl;
     }
     std::cout << std::endl;
+
+
 
     std::cout << "Contract 4: cleanup that runs even when the code throws" << std::endl;
     std::sort(distinct.begin(), distinct.end(), HighestValueFirst());
@@ -97,7 +105,7 @@ int main()
     }
     catch (std::runtime_error& ex) {
         std::cout << " Caught: " << ex.what() << std::endl;
-        log->close();  // the moment a using-block's exit would have called Dispose
+        log->close(); 
     }
 
     bool closedItself = log->getIsClosed();

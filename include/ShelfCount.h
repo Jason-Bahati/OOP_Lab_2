@@ -3,6 +3,7 @@
 #include <string>
 #include <functional>
 
+// A shelf count keyed by aisle and slot; equality and ordering ignore the measured value
 
 class ShelfCount
 {

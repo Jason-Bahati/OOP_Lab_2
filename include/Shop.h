@@ -5,7 +5,10 @@
 #include "StockItem.h"
 #include <string>
 #include <vector>
-
+/*
+    Owns a collection of StockItems, calculates the totals,
+    and prints the inventory report
+*/
 class Shop : public IReportable
 {
     private:

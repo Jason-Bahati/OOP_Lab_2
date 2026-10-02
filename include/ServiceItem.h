@@ -4,6 +4,8 @@
 #include "StockItem.h"
 #include <string>
 
+// A service with no physical bulk, discounted based on labor hours
+
 class ServiceItem : public IDiscountable, public StockItem
 {
     private:

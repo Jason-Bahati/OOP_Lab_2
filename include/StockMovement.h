@@ -2,6 +2,8 @@
 #define STOCKMOVEMENT_H
 #include <string>
 
+// Records one completed change in quantity on a StockItem
+
 class StockMovement
 {
     private:

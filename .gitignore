@@ -67,8 +67,7 @@ vcpkg_installed/
 Testing/
 .cache/
 
-# pseudocode text files
-*.txt
+
 
 # other stuff
 main
