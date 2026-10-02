@@ -6,6 +6,8 @@
     so I don't have to write it all out in main, simply:
 
     #include "AllHeaderFiles.h"
+
+    this only applies to Lab 2: inheritance
 */
 
 #include "DurableGood.h"

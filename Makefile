@@ -1,12 +1,16 @@
 CXX      = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -Iinclude
-SRC      = $(wildcard src/*.cpp)
-TARGET   = main
 
-all: $(TARGET)
 
-$(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) $(SRC) -o $(TARGET)
+COMMON_SRC = $(filter-out src/main_inheritance.cpp src/main_contracts.cpp, $(wildcard src/*.cpp))
+
+all: inheritance contracts
+
+inheritance: src/main_inheritance.cpp $(COMMON_SRC)
+	$(CXX) $(CXXFLAGS) src/main_inheritance.cpp $(COMMON_SRC) -o inheritance
+
+contracts: src/main_contracts.cpp $(COMMON_SRC)
+	$(CXX) $(CXXFLAGS) src/main_contracts.cpp $(COMMON_SRC) -o contracts
 
 clean:
-	rm -f $(TARGET)
+	rm -f inheritance contracts
